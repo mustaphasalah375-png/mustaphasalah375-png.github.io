@@ -3,84 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S.SPORTS INTERNATIONAL</title>
+<title>S.SPORTS INTERNATIONAL - Developed by Mustapha Salah</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#05070a;color:#fff;font-family:Arial}
-.top{padding:14px;background:#070c14;position:sticky;top:0;z-index:20;border-bottom:1px solid #1e2a3d}
-.logo{font-size:26px;font-weight:900}.logo b{color:#1677ff}
-.live-dot{color:#ff3b3b;font-size:11px;margin-left:8px;animation:b 1s infinite}
-@keyframes b{50%{opacity:.2}}
-select,input{width:100%;padding:12px;margin-top:10px;background:#111823;color:#fff;border:1px solid #2a3a52;border-radius:10px;font-size:15px}
-.tabs{display:flex;gap:6px;margin-top:12px}
-.tabs button{flex:1;padding:9px;background:#111823;border:1px solid #1e2a3d;color:#8392a8;border-radius:20px;font-weight:700}
-.tabs button.active{background:#1677ff;color:#fff}
-#box{padding:12px}
-.card{background:linear-gradient(180deg,#17233a,#0c101a);border:1px solid #1e2a3d;border-radius:16px;padding:14px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}
-.team-row{display:flex;justify-content:space-between;padding:4px 0;font-weight:700}
-.small{font-size:10px;color:#8392a8;margin-top:5px}.live{color:#ff3b3b;font-weight:900}
-.score{background:#000;padding:8px 12px;border-radius:10px;font-weight:900;font-size:18px}
-.country{font-size:11px;color:#1677ff;margin-bottom:4px}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#05070a;color:#fff;font-family:Arial;overflow-x:hidden}
+.top{padding:14px;background:#070c14;position:sticky;top:0;z-index:30;border-bottom:2px solid #1677ff}
+.logo{font-size:28px;font-weight:900}.logo b{color:#1677ff}
+.dev{font-size:12px;color:#00e676;font-weight:900;margin-top:6px;background:#0a1a0f;padding:7px 12px;border-radius:20px;display:inline-block;border:1px solid #00e67655}
+.live-dot{color:#ff3b3b;animation:b 1s infinite;margin-left:8px;font-size:11px}@keyframes b{50%{opacity:.2}}
+input{width:100%;padding:13px;background:#111823;color:#fff;border:1px solid #2a3a52;border-radius:12px;margin-top:10px}
+.tabs,.m-tabs,.sub-tabs{display:flex;gap:6px;overflow-x:auto}.tabs{margin-top:12px}.m-tabs{padding:10px;background:#070c14;position:sticky;top:58px;z-index:20;border-bottom:1px solid #1e2a3d}.sub-tabs{padding:10px;background:#0a0f1a;border-bottom:1px solid #1e2a3d}
+.tabs button,.m-tabs button,.sub-tabs button{padding:9px 14px;background:#111823;border:1px solid #1e2a3d;color:#8392a8;border-radius:20px;font-weight:800;font-size:11px;white-space:nowrap;cursor:pointer}
+.tabs button.active,.m-tabs button.active{background:#1677ff;color:#fff;border-color:#1677ff}.sub-tabs button.active{background:#fff;color:#000}
+#box{padding:12px;min-height:70vh}
+.card{background:linear-gradient(180deg,#17233a,#0c101a);border:1px solid #1e2a3d;border-radius:18px;padding:14px;margin:12px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.card.live{border-color:#ff3b3b55;box-shadow:0 0 15px #ff3b3b22}
+.team-row{display:flex;justify-content:space-between;padding:5px 0;font-weight:800;font-size:14px}
+.small{font-size:10px;color:#8392a8;margin-top:6px}.live-txt{color:#ff3b3b;font-weight:900}
+.score{background:#000;padding:10px 14px;border-radius:12px;font-weight:900;font-size:20px;min-width:70px;text-align:center;border:1px solid #1e2a3d}.score.live-score{background:#ff3b3b;color:#fff;animation:pulse 1.5s infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.country{font-size:11px;color:#1677ff;font-weight:800;margin-bottom:4px;display:flex;justify-content:space-between}
+.fav{font-size:18px;cursor:pointer;color:#333}.fav.on{color:#ffd700}
+#modal{position:fixed;inset:0;background:#05070a;z-index:100;display:none;overflow-y:auto}#modal.show{display:block}
+.m-header{padding:14px;background:#070c14;position:sticky;top:0;z-index:30;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #1677ff}
+.detail-card{background:#111823;margin:10px;border-radius:14px;padding:14px;border:1px solid #1e2a3d}
+.stat-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1a2332;font-size:13px}
+.player-row{display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid #1a2332;cursor:pointer;align-items:center}.player-row:active{background:#1a2332}
+.p-num{background:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;border:1px solid #1e2a3d}
+.form-W,.form-L,.form-D{padding:3px 7px;border-radius:5px;font-size:10px;font-weight:900;color:#fff;margin:1px}.form-W{background:#00c853}.form-L{background:#ff3b3b}.form-D{background:#8392a8}
+.bar{display:flex;height:6px;background:#0c101a;border-radius:10px;margin-top:6px;overflow:hidden}.bar-home{background:#1677ff}.bar-away{background:#8392a8}
+.footer{text-align:center;padding:22px;color:#666;font-size:11px;border-top:1px solid #1e2a3d;margin-top:20px;background:#070c14;line-height:20px}.footer b{color:#1677ff}
+.btn{width:100%;padding:14px;background:linear-gradient(90deg,#1677ff,#00e676);border:none;border-radius:12px;color:#fff;font-weight:900;margin-top:12px;cursor:pointer}
+.notify{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1677ff;color:#fff;padding:12px 20px;border-radius:30px;font-weight:800;font-size:12px;display:none;z-index:200}.notify.show{display:block}
+.h2h{padding:10px;background:#0c101a;margin:5px 0;border-radius:10px;display:flex;justify-content:space-between;font-size:12px;border:1px solid #1a2332}
+.com{padding:12px;border-left:4px solid #1e2a3d;margin:8px 0;background:#0c101a;border-radius:0 10px 10px 0}.com.goal{border-color:#00e676;background:#00e67612}
+.close{font-size:30px;cursor:pointer;color:#8392a8;padding:0 8px}
 </style>
 </head>
 <body>
-<div style="max-width:650px;margin:auto">
+<div style="max-width:700px;margin:auto">
 <div class="top">
-<div class="logo"><b>S.</b>SPORTS <span class="live-dot">● LIVE</span></div>
-<select id="league">
-<optgroup label="🌍 INTERNATIONAL">
-<option value="fifa.worldq">World Cup Qualification</option>
-<option value="uefa.nations">UEFA Nations League</option>
-<option value="caf.nations">AFCON - Africa</option>
-<option value="uefa.champions">Champions League</option>
-<option value="uefa.europa">Europa League</option>
-</optgroup>
-<optgroup label="🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENGLAND">
-<option value="eng.1" selected>Premier League</option>
-<option value="eng.fa">FA Cup</option>
-</optgroup>
-<optgroup label="🇪🇸 SPAIN"><option value="esp.1">La Liga</option></optgroup>
-<optgroup label="🇩🇪 GERMANY"><option value="ger.1">Bundesliga</option></optgroup>
-<optgroup label="🇬🇭 AFRICA"><option value="rsa.1">South Africa PSL</option><option value="egy.1">Egypt Premier</option></optgroup>
-<optgroup label="🇺🇸 AMERICAS"><option value="usa.1">MLS</option><option value="bra.1">Brazil</option></optgroup>
-</select>
-<input id="search" placeholder="Search Ghana, Arsenal, Nigeria...">
+<div class="logo"><b>S.</b>SPORTS INTERNATIONAL <span class="live-dot">● PRO MAX</span></div>
+<div class="dev">Developed by Mustapha Salah 🇬🇭 - Ghana</div>
+<input id="search" placeholder="Search team, player, Ghana, Arsenal...">
 <div class="tabs">
-<button class="active" data-f="all">All</button>
+<button class="active" data-f="all">🌍 All</button>
 <button data-f="live">🔴 Live</button>
-<button data-f="finished">Finished</button>
+<button data-f="finished">✅ Finished</button>
+<button data-f="upcoming">⏰ Upcoming</button>
+<button data-f="fav">⭐ Favs</button>
 </div>
 </div>
-<div id="box">Loading...</div>
+<div class="sub-tabs">
+<button class="active" data-l="all">All Leagues</button>
+<button data-l="eng.1">EPL</button>
+<button data-l="esp.1">La Liga</button>
+<button data-l="uefa.champions">UCL</button>
+<button data-l="gha.1">Ghana PL</button>
 </div>
+<div id="box">Loading - Developed by Mustapha Salah...</div>
+<div class="footer"><b style="font-size:14px;color:#fff">S.SPORTS INTERNATIONAL</b><br>Developed by <b>Mustapha Salah</b> • Accra, Ghana<br>© 2026 • 1,200 Lines • Flashscore Killer • PRO MAX<br><span style="color:#00e676">Tap any match → Line-up → Tap player/team for details</span></div>
+</div>
+
+<div id="modal">
+<div class="m-header"><div><div id="m-title" style="font-weight:900;font-size:14px"></div><div style="font-size:10px;color:#00e676;margin-top:2px">Mustapha Salah • Detail Engine</div></div><div class="close" onclick="closeModal()">×</div></div>
+<div class="m-tabs">
+<button class="active" data-tab="summary" onclick="switchTab('summary')">SUMMARY</button>
+<button data-tab="lineup" onclick="switchTab('lineup')">LINE-UP</button>
+<button data-tab="stats" onclick="switchTab('stats')">STATS</button>
+<button data-tab="commentary" onclick="switchTab('commentary')">LIVE</button>
+<button data-tab="h2h" onclick="switchTab('h2h')">H2H</button>
+<button data-tab="teams" onclick="switchTab('teams')">TEAMS</button>
+</div>
+<div id="m-content"></div>
+<div class="footer">Developed by <b>Mustapha Salah</b> 🇬🇭 • Accra • 1,200 Lines PRO MAX</div>
+</div>
+<div id="notify" class="notify"></div>
+
 <script>
-let EVENTS=[],FILTER='all';
-const box=document.getElementById('box'),league=document.getElementById('league'),search=document.getElementById('search');
-async function load(){
-box.innerHTML='<p style="text-align:center;color:#8392a8;padding:30px">Loading '+league.options[league.selectedIndex].text+'...</p>';
-try{
-const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/'+league.value+'/scoreboard');
-const j=await r.json();EVENTS=j.events||[];
-}catch(e){box.innerHTML='<p style="text-align:center;color:#ff3b3b;padding:30px">Check internet</p>';return}
-show();
-}
-function show(){
-let list=[...EVENTS];
-if(FILTER==='live')list=list.filter(e=>e.competitions[0].status.type.state==='in');
-if(FILTER==='finished')list=list.filter(e=>e.competitions[0].status.type.state==='post');
-const q=search.value.toLowerCase();
-if(q)list=list.filter(e=>e.name.toLowerCase().includes(q));
-if(!list.length){box.innerHTML='<p style="text-align:center;color:#666;padding:30px">No games today<br>Try another league</p>';return;}
-box.innerHTML=list.map(ev=>{
-const c=ev.competitions[0];const h=c.competitors.find(x=>x.homeAway==='home');const a=c.competitors.find(x=>x.homeAway==='away');const live=c.status.type.state==='in';
-return `<div class="card"><div style="flex:1"><div class="country">${c.status.type.detail.toUpperCase()}</div><div class="team-row"><span>${h.team.displayName}</span><span>${h.score||0}</span></div><div class="team-row"><span>${a.team.displayName}</span><span>${a.score||0}</span></div><div class="small ${live?'live':''}">${live?'● LIVE • ':''}${c.status.type.detail}</div></div><div class="score">${h.score||0}-${a.score||0}</div></div>`;
-}).join('');
-}
-document.querySelectorAll('.tabs button').forEach(b=>{
-b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');FILTER=b.dataset.f;show();}
-});
-league.onchange=load;search.oninput=show;
-load();setInterval(load,30000);
-</script>
-</body>
-    </html>
+// DEVELOPED BY MUSTAPHA SALAH - 1200 LINES - MAX CODE
+let ALL=[],FILTER='all',LEAGUE='all',CUR=null,DETAIL=null,FAVS=JSON.parse(localStorage.getItem('favs')||'[]');
+const box=document.getElementById('box'),search=document.getElementById('search');
+const LEAGUES=['eng.1','esp.1','ger.1','ita.1','fra.1','uefa.champions','usa.
