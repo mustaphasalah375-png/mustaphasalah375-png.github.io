@@ -2,83 +2,85 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- HilltopAds Verification - DO NOT DELETE -->
-<meta name="3d7a444453c5f5bcc37aa51a34cd5b0beb4f8001" content="3d7a444453c5f5bcc37aa51a34cd5b0beb4f8001" />
-<meta name="referrer" content="no-referrer-when-downgrade" />
-<script>
-(function(yecd){
-var d = document,
-    s = d.createElement('script'),
-    l = d.currentScript || d.scripts[d.scripts.length - 1];
-s.settings = yecd || {};
-s.src = "//level-product.com/b/X/V/s.d/G/l/0/Y/WdcN/9OZu/Z/G/lk/P/TdYQ3iM/TdA/1/N/jtQ/1/Njz/M/z/MMLgA/5bN/wQ";
-s.async = true;
-s.referrerPolicy = "no-referrer-when-downgrade";
-l.parentNode.insertBefore(s, l);
-})({})
-   
-
-</script>
-
-<link rel="manifest" href="manifest.json">
-<title>S.SPORT - Live Scores</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S.SPORTS INTERNATIONAL</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0f1115;color:#fff;font-family:Arial,sans-serif}
-header{background:#121b2c;padding:14px 12px;display:flex;justify-content:space-between;align-items:center}
-.tabs{display:flex;gap:6px;overflow:auto;padding:10px}
-.tab{background:#1e2a44;padding:8px 14px;border-radius:20px;white-space:nowrap;cursor:pointer}
-.tab.on{background:#2a4b8d}
-.filters{display:flex;gap:8px;padding:10px}
-.f{background:#1a2337;padding:6px 12px;border-radius:16px;font-size:13px}
-.f.on{background:#fff;color:#000}
-.match{background:#131f35;margin:8px 12px;padding:12px;border-radius:10px}
-.top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#8a9bb5}
-.team b{font-size:14px}
-.score{font-size:18px;font-weight:bold}
-.det{display:none;padding:12px;border-top:1px solid #1e2a44;margin-top:8px}
-.liveDot{width:7px;height:7px;background:#ff2d55;border-radius:50%;display:inline-block;animation:blink 1s infinite}
-.league{margin:18px 12px 4px;color:#00e676;font-size:12px;font-weight:bold}
-@keyframes blink{0%{opacity:1}50%{opacity:0.2}}
+body{background:#05070a;color:#fff;font-family:Arial}
+.top{padding:14px;background:#070c14;position:sticky;top:0;z-index:20;border-bottom:1px solid #1e2a3d}
+.logo{font-size:26px;font-weight:900}.logo b{color:#1677ff}
+.live-dot{color:#ff3b3b;font-size:11px;margin-left:8px;animation:b 1s infinite}
+@keyframes b{50%{opacity:.2}}
+select,input{width:100%;padding:12px;margin-top:10px;background:#111823;color:#fff;border:1px solid #2a3a52;border-radius:10px;font-size:15px}
+.tabs{display:flex;gap:6px;margin-top:12px}
+.tabs button{flex:1;padding:9px;background:#111823;border:1px solid #1e2a3d;color:#8392a8;border-radius:20px;font-weight:700}
+.tabs button.active{background:#1677ff;color:#fff}
+#box{padding:12px}
+.card{background:linear-gradient(180deg,#17233a,#0c101a);border:1px solid #1e2a3d;border-radius:16px;padding:14px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}
+.team-row{display:flex;justify-content:space-between;padding:4px 0;font-weight:700}
+.small{font-size:10px;color:#8392a8;margin-top:5px}.live{color:#ff3b3b;font-weight:900}
+.score{background:#000;padding:8px 12px;border-radius:10px;font-weight:900;font-size:18px}
+.country{font-size:11px;color:#1677ff;margin-bottom:4px}
 </style>
 </head>
 <body>
-
-<div id="container-2e5c3e2301ad5e2fd6c6e2a8f9a0b1c2"></div>
-
-<header><b>S.SPORT</b><span style="background:#00e676;color:#000;padding:2px 8px;border-radius:10px;font-size:12px">LIVE</span></header>
-
+<div style="max-width:650px;margin:auto">
+<div class="top">
+<div class="logo"><b>S.</b>SPORTS <span class="live-dot">● LIVE</span></div>
+<select id="league">
+<optgroup label="🌍 INTERNATIONAL">
+<option value="fifa.worldq">World Cup Qualification</option>
+<option value="uefa.nations">UEFA Nations League</option>
+<option value="caf.nations">AFCON - Africa</option>
+<option value="uefa.champions">Champions League</option>
+<option value="uefa.europa">Europa League</option>
+</optgroup>
+<optgroup label="🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENGLAND">
+<option value="eng.1" selected>Premier League</option>
+<option value="eng.fa">FA Cup</option>
+</optgroup>
+<optgroup label="🇪🇸 SPAIN"><option value="esp.1">La Liga</option></optgroup>
+<optgroup label="🇩🇪 GERMANY"><option value="ger.1">Bundesliga</option></optgroup>
+<optgroup label="🇬🇭 AFRICA"><option value="rsa.1">South Africa PSL</option><option value="egy.1">Egypt Premier</option></optgroup>
+<optgroup label="🇺🇸 AMERICAS"><option value="usa.1">MLS</option><option value="bra.1">Brazil</option></optgroup>
+</select>
+<input id="search" placeholder="Search Ghana, Arsenal, Nigeria...">
 <div class="tabs">
-<div class="tab on" data-tab="all">All</div>
-<div class="tab" data-tab="live">Live</div>
-<div class="tab" data-tab="today">Today</div>
-<div class="tab" data-tab="tomorrow">Tomorrow</div>
-</div>
-
-<div class="filters">
-<div class="f on" data-f="all">All Leagues</div>
-<div class="f" data-f="top">Top</div>
-</div>
-
-<div style="text-align:center;padding:10px">
-<div class="league">PREMIER LEAGUE</div>
-<div class="match">
-<div class="top"><span><span class="liveDot"></span> LIVE 67'</span><span>PL</span></div>
-<div style="display:flex;justify-content:space-between;margin-top:8px"><span class="team"><b>Man City</b></span><span class="score">2 - 1</span><span class="team"><b>Arsenal</b></span></div>
-</div>
-<div class="league">LA LIGA</div>
-<div class="match">
-<div class="top"><span>20:00</span><span>LL</span></div>
-<div style="display:flex;justify-content:space-between;margin-top:8px"><span class="team"><b>Real Madrid</b></span><span class="score">vs</span><span class="team"><b>Barcelona</b></span></div>
+<button class="active" data-f="all">All</button>
+<button data-f="live">🔴 Live</button>
+<button data-f="finished">Finished</button>
 </div>
 </div>
-
+<div id="box">Loading...</div>
+</div>
 <script>
-// Your original S.Sport script can stay here
-// This keeps your site working
-console.log("S.SPORT loaded");
+let EVENTS=[],FILTER='all';
+const box=document.getElementById('box'),league=document.getElementById('league'),search=document.getElementById('search');
+async function load(){
+box.innerHTML='<p style="text-align:center;color:#8392a8;padding:30px">Loading '+league.options[league.selectedIndex].text+'...</p>';
+try{
+const r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/'+league.value+'/scoreboard');
+const j=await r.json();EVENTS=j.events||[];
+}catch(e){box.innerHTML='<p style="text-align:center;color:#ff3b3b;padding:30px">Check internet</p>';return}
+show();
+}
+function show(){
+let list=[...EVENTS];
+if(FILTER==='live')list=list.filter(e=>e.competitions[0].status.type.state==='in');
+if(FILTER==='finished')list=list.filter(e=>e.competitions[0].status.type.state==='post');
+const q=search.value.toLowerCase();
+if(q)list=list.filter(e=>e.name.toLowerCase().includes(q));
+if(!list.length){box.innerHTML='<p style="text-align:center;color:#666;padding:30px">No games today<br>Try another league</p>';return;}
+box.innerHTML=list.map(ev=>{
+const c=ev.competitions[0];const h=c.competitors.find(x=>x.homeAway==='home');const a=c.competitors.find(x=>x.homeAway==='away');const live=c.status.type.state==='in';
+return `<div class="card"><div style="flex:1"><div class="country">${c.status.type.detail.toUpperCase()}</div><div class="team-row"><span>${h.team.displayName}</span><span>${h.score||0}</span></div><div class="team-row"><span>${a.team.displayName}</span><span>${a.score||0}</span></div><div class="small ${live?'live':''}">${live?'● LIVE • ':''}${c.status.type.detail}</div></div><div class="score">${h.score||0}-${a.score||0}</div></div>`;
+}).join('');
+}
+document.querySelectorAll('.tabs button').forEach(b=>{
+b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');FILTER=b.dataset.f;show();}
+});
+league.onchange=load;search.oninput=show;
+load();setInterval(load,30000);
 </script>
-
 </body>
-</html>
+    </html>
